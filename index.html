@@ -7,16 +7,15 @@
 	<meta name="keywords" content="menu"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
+	<link rel="stylesheet" href="css/style.css"/>
 	<link rel="stylesheet" href="css/desktop_style.css"/>
 	<link rel="stylesheet" href="css/mobile_style.css"/>
-
-	<script src="js/mobile_menu.js"></script>
 </head>
 
 <body>
 	<div id="topRect">
 		<!-- button for displaying menu, visible when mobile mode is active -->
-		<button id="mobileMenuIcon" onclick="openCloseMenu(menuRect)"> <img src="img/menu_icon.png"/> </button>
+		<button id="mobileMenuIcon" onclick="mobileMenu.openClose()"> <img src="img/menu_icon.png"/> </button>
 		<div style="clear: both;"></div>
 
 		<nav id="menuRect">
@@ -36,6 +35,8 @@
 			</ul>
 		</nav>
 	</div>
+
+	<script src="js/mobile_menu.js"></script>
 
 	<div id="content">
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus convallis consectetur blandit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus vehicula sapien id lacus fermentum commodo et at magna. Quisque dolor enim, commodo sed mauris sit amet, suscipit interdum mi. Donec commodo gravida leo vitae semper. Etiam placerat ac libero vel fringilla. Phasellus quis enim quam. Nullam sit amet pharetra erat, non fermentum dolor. Curabitur consectetur imperdiet libero non pharetra. Quisque viverra dui lectus.</p>

@@ -1,0 +1,106 @@
+body
+{
+	margin: 0;
+	background-image: url("img/background.png");
+	font-family: "Verdana";
+}
+
+#topRect
+{
+	background-color: #ccc;
+	border-bottom: 1px solid white;
+}
+
+/*container for menu options*/
+#menuRect
+{
+	padding-top: 8px;
+	padding-bottom: 8px;
+	text-align: center;
+}
+
+/*list of menu options*/
+#menuRect > ul
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+/*menu options positioned horizontally*/
+#menuRect > ul > li
+{
+	font-size: 24px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	border: 1px solid transparent;
+}
+
+#menuRect > ul > li:hover
+{
+	cursor: pointer;
+	background-color: #bbb;
+	border: 1px solid white;
+}
+
+#menuRect > ul > li > a
+{
+	display: block;
+	text-decoration: none;
+	color: white;
+	padding: 10px;
+}
+
+/*list of submenu options, visible when one of horizontal menu option is hovered over*/
+#menuRect > ul > li > ol
+{
+	display: none;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+/*submenu options positionet vertically*/
+#menuRect > ul > li > ol > li
+{
+	border-bottom: 4px solid transparent;
+	border-top: 4px solid transparent;
+}
+
+#menuRect > ul > li > ol > li:hover
+{
+	cursor: pointer;
+	border-bottom: 4px solid lightgreen;
+	border-top: 4px solid lightgreen;
+}
+
+#menuRect > ul > li > ol > li > a
+{
+	display: block;
+	text-decoration: none;
+	color: white;
+	padding: 10px;
+}
+
+/*wrapper for text content*/
+#content
+{
+	max-width: 1000px;
+	min-height: 600px;
+	background-color: #cddddd;
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: justify;
+	padding: 15px;
+	padding-top: 8px;
+	color: #444;
+}
+
+p
+{
+	margin: 0;
+	margin-bottom: 20px;
+}

@@ -1,29 +1,79 @@
-let openCloseMenu=(function()
-{
-	let menuClosed=true;
-	return function(menu)
+let mobileMenu={
+	menu: document.getElementById("menuRect"),
+	submenus: [],
+	opened: false,
+
+	initSubmenus: function()
 	{
-		let list=menu.getElementsByTagName("ul")[0];
-		let listElem=list.childNodes;
-		if (menuClosed)
-		{
-			list.style.opacity="1";
-			menu.style.height="256px";
-			menu.style.paddingTop="8px";
-			menu.style.paddingBottom="8px";
+		let childNodes=this.menu.childNodes[1].childNodes;
+		for (let i=1 ; i<childNodes.length - 1 ; i++)
+			this.submenus.push( {element: childNodes[i], opened: false} );
+	},
 
-			for (let i=1 ; i<listElem.length - 1 ; i++)
-				listElem[i].style.display="block";
-		}
+	//display menu
+	open: function()
+	{	
+		this.menu.style.display="block";
+	},
+
+	//hide menu
+	close: function()
+	{
+		this.menu.style.display="none";
+	},
+
+	//handler for mobileMenuIcon's click event
+	openClose: function()
+	{
+		if (this.opened)
+			this.close();
 		else
-		{	
-			menu.style.height="0";
-			menu.style.padding="0";
-			list.style.opacity="0";
+			this.open();
 
-			for (let i=1 ; i<listElem.length - 1 ; i++)
-				listElem[i].style.display="none";
+		//change state on opposite
+		this.opened=!this.opened;
+	},
+
+	initEvents: function()
+	{
+		for (let i=0 ; i<this.submenus.length ; i++)
+		{
+			if (this.submenus[i].element.childNodes.length>3)
+				this.submenus[i].element.addEventListener("click", () => { this.openCloseSubmenu(i); });
 		}
-		menuClosed=!menuClosed;
+	},
+
+	openSubmenus: function(sub)
+	{
+		let list=sub.element.childNodes[3];
+		list.style.display="block";
+	},
+
+	closeSubmenus: function(sub)
+	{
+		let list=sub.element.childNodes[3];
+		list.style.display="none";
+	},
+
+	openCloseSubmenu: function(id)
+	{
+		if (!mobileMode)
+			return;
+
+		if (this.submenus[id].opened)
+			this.closeSubmenus(this.submenus[id]);
+		else
+			this.openSubmenus(this.submenus[id]);
+		this.submenus[id].opened=!this.submenus[id].opened;
 	}
-})();
+};
+
+mobileMenu.initSubmenus();
+mobileMenu.initEvents();
+
+//variable indicating whether menu should be displayed in mobile mode
+let mobileMode=(window.innerWidth <= 600) ? true : false;
+
+//mobile mode media query
+let media=window.matchMedia("screen and (max-width: 600px)");
+media.addListener(function() { mobileMode=media.matches; } );
