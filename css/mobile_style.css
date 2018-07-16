@@ -1,0 +1,71 @@
+/*mobile menu icon is not displayed in desktop mode*/
+#mobileMenuIcon
+{
+	display: none;
+}
+
+/*mobile mode is active when screen's width is equal to 600px or less than 600px*/
+@media screen and (max-width: 600px)
+{
+	#mobileMenuIcon
+	{
+		display: block;
+		border: none;
+		background-color: transparent;
+		padding: 0;
+		width: 50px;
+		height: 50px;
+		margin: 10px;
+		margin-right: 20px;
+		float: right;
+	}
+
+	#mobileMenuIcon > img
+	{
+		width: 100%;
+		height: 100%;
+	}
+
+	#mobileMenuIcon:hover
+	{
+		opacity: 0.8;
+		cursor: pointer;
+	}
+
+	#menuRect
+	{
+		position: absolute;
+		z-index: 10;
+		width: 100%;
+		top: 70px;
+		opacity: 0.8;
+		background-color: #333;
+
+		height: 0;
+		padding: 0;
+		transition: height 1s;
+	}
+
+	#menuRect > ul
+	{
+		opacity: 0;
+		transition: opacity 0.8s 0.5s;
+	}
+
+	#menuRect > ul > li
+	{
+		width: 100%;
+		display: none;
+	}
+
+	#menuRect > ul > li:hover > a
+	{
+		color: black;
+	}
+
+	/*#menuRect > ul > li > ol
+	{
+		position: relative;
+		width: 100%;
+	}*/
+}
