@@ -30,7 +30,7 @@ body
 /*menu options positioned horizontally*/
 #menuRect > ul > li
 {
-	font-size: 24px;
+	font-size: 20px;
 	font-weight: bold;
 	letter-spacing: 2px;
 	border: 1px solid transparent;
