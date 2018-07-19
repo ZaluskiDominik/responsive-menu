@@ -1,12 +1,15 @@
 body
 {
 	margin: 0;
+	/* Background pattern from Toptal Subtle Patterns */
 	background-image: url("img/background.png");
 	font-family: "Verdana";
 }
 
+/*Icons made by Icon Pond from www.flaticon.com*/
 #topRect
 {
+	position: relative;
 	background-color: #ccc;
 	border-bottom: 1px solid white;
 }

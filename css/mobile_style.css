@@ -5,8 +5,28 @@
 }
 
 /*mobile mode is active when screen's width is equal to 600px or less than 600px*/
-@media screen and (max-width: 600px)
+@media screen and (max-width: 1030px)
 {
+	#logo
+	{
+		display: inline-block;
+		max-width: 400px;
+		position: absolute;
+		top: 50%;
+		left: 15px;
+		transform: translateY(-50%);
+		color: white;
+		font-size: 13px;
+	}
+
+	#logo > img
+	{
+		float: left;
+		width: 50px;
+		height: 50px;
+		margin-right: 10px;
+	}
+
 	#mobileMenuIcon
 	{
 		display: block;

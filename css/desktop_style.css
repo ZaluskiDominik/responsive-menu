@@ -1,5 +1,10 @@
-@media screen and (min-width: 601px)
+@media screen and (min-width: 1031px)
 {
+	#logo
+	{
+		display: none;
+	}
+
 	#menuRect
 	{
 		display: block !important;
