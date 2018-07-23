@@ -57,7 +57,8 @@ let mobileMenu={
 
 	openCloseSubmenu: function(id)
 	{
-		if (!mobileMode)
+		//if it's not an mobile mode the quit
+		if (window.innerWidth>1030)
 			return;
 
 		if (this.submenus[id].opened)
@@ -71,9 +72,11 @@ let mobileMenu={
 mobileMenu.initSubmenus();
 mobileMenu.initEvents();
 
+/*
 //variable indicating whether menu should be displayed in mobile mode
 let mobileMode=(window.innerWidth <= 600) ? true : false;
 
 //mobile mode media query
 let media=window.matchMedia("screen and (max-width: 600px)");
 media.addListener(function() { mobileMode=media.matches; } );
+*/

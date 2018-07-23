@@ -2,7 +2,7 @@ body
 {
 	margin: 0;
 	/* Background pattern from Toptal Subtle Patterns */
-	background-image: url("img/background.png");
+	background-image: url("../img/background.png");
 	font-family: "Verdana";
 }
 
@@ -10,8 +10,27 @@ body
 #topRect
 {
 	position: relative;
-	background-color: #ccc;
-	border-bottom: 1px solid white;
+	background-color: #cdcdc1;
+	border-bottom: 2px solid #999;
+}
+
+/*text on logo*/
+.logoText
+{
+	display: inline-block;
+	font-size: 26px;
+	font-weight: bold;
+	position: relative;
+}
+
+.leftLogoText
+{
+	color: red;
+}
+
+.rightLogoText
+{
+	color: seagreen;
 }
 
 /*container for menu options*/
@@ -39,13 +58,6 @@ body
 	border: 1px solid transparent;
 }
 
-#menuRect > ul > li:hover
-{
-	cursor: pointer;
-	background-color: #bbb;
-	border: 1px solid white;
-}
-
 #menuRect > ul > li > a
 {
 	display: block;
@@ -63,20 +75,6 @@ body
 	padding: 0;
 }
 
-/*submenu options positionet vertically*/
-#menuRect > ul > li > ol > li
-{
-	border-bottom: 4px solid transparent;
-	border-top: 4px solid transparent;
-}
-
-#menuRect > ul > li > ol > li:hover
-{
-	cursor: pointer;
-	border-bottom: 4px solid lightgreen;
-	border-top: 4px solid lightgreen;
-}
-
 #menuRect > ul > li > ol > li > a
 {
 	display: block;
@@ -89,21 +87,29 @@ body
 #content
 {
 	max-width: 1000px;
-	min-height: 600px;
-	background-color: #cddddd;
-	border-left: 1px solid white;
-	border-right: 1px solid white;
+	min-height: 800px;
+	background-color: #e7e7ee;
 	position: relative;
 	left: 50%;
 	transform: translateX(-50%);
 	text-align: justify;
 	padding: 15px;
 	padding-top: 8px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 	color: #444;
+	-webkit-box-shadow: 3px 3px 8px 7px rgba(102,102,102,1);
+	-moz-box-shadow: 3px 3px 8px 7px rgba(102,102,102,1);
+	box-shadow: 3px 3px 8px 7px rgba(102,102,102,1);
 }
 
 p
 {
 	margin: 0;
 	margin-bottom: 20px;
+}
+
+p:last-child
+{
+	margin-bottom: 0;
 }

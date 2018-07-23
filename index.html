@@ -13,69 +13,86 @@
 </head>
 
 <body>
-	<div id="topRect">
-		<header id="logo"> 
-			<img src="img/logo.png"/>
-			<q style="font-style: italic">Mylisz niebo z gwiazdami odbitymi nocą na powierzchni stawu.</q>
-			<br/> Andrzej Sapkowski – Wieża jaskółki
-		</header>
-		<!-- button for displaying menu, visible when mobile mode is active -->
-		<button id="mobileMenuIcon" onclick="mobileMenu.openClose()"> <img src="img/menu_icon.png"/> </button>
-		<div style="clear: both;"></div>
+	<header>
+		<div id="topRect">
+			<div id="quote">
+				<q style="font-style: italic">
+					Czytanie książek to najpiękniejsza zabawa, jaką sobie ludzkość wymyśliła.
+				</q> <br/>
+				<span style="font-size: 14px">Wisława Szymborska</span>
+			</div>
 
-		<nav id="menuRect">
-			<ul>
-				<li>
-					<a href="#">Fantasy</a>
-					<ol>
-						<li> <a href="#">B. Sanderson</a> </li>
-						<li> <a href="#">A. Sapkowski</a> </li>
-						<li> <a href="#">J. Flanagan</a> </li>
-						<li> <a href="#">J. K. Rowling</a> </li>
-						<li> <a href="#">J. Butcher</a> </li>
-						<li> <a href="#">J. R. R. Tolkien</a> </li>
-					</ol>
-				</li
-				><li> 
-					<a href="#">Kryminał</a> 
-					<ol>
-						<li> <a href="#">S. King</a> </li>
-						<li> <a href="#">A. Christie</a> </li>
-						<li> <a href="#">A. C. Doyle</a> </li>
-					</ol>
-				</li
-				><li> 
-					<a href="#">Przygodowe</a> 
-					<ol>
-						<li> <a href="#">J. Verne</a> </li>
-						<li> <a href="#">A. Szklarski</a> </li>
-					</ol>
-				</li
-				><li> 
-					<a href="#">Sci fiction</a>
-					<ol>
-						<li> <a href="#">S. Lem</a> </li>
-						<li> <a href="#">J. Grzędowicz</a> </li>
-					</ol>
-				</li
-				><li> <a href="#">O autorze</a> </li>
-			</ul>
-		</nav>
-	</div>
+			<div id="logo">
+				<span class="logoText leftLogoText"> Dobra </span>
+				<img src="img/logo.png"/>
+				<span class="logoText rightLogoText"> Książka </span>
+			</div>
+			
+			<!-- button for displaying menu, visible when mobile mode is active -->
+			<button id="mobileMenuIcon" onclick="mobileMenu.openClose()"> <img src="img/menu_icon.png"/> </button>
+			<div style="clear: both;"></div>
+
+			<!-- main navigation -->
+			<nav>
+				<div id="menuRect">
+					<ul>
+						<li>
+							<a href="#">Fantasy</a>
+							<ol>
+								<li> <a href="#">B. Sanderson</a> </li>
+								<li> <a href="#">A. Sapkowski</a> </li>
+								<li> <a href="#">J. Flanagan</a> </li>
+								<li> <a href="#">J. K. Rowling</a> </li>
+								<li> <a href="#">J. Butcher</a> </li>
+								<li> <a href="#">J. R. R. Tolkien</a> </li>
+							</ol>
+						</li
+						><li> 
+							<a href="#">Kryminał</a> 
+							<ol>
+								<li> <a href="#">S. King</a> </li>
+								<li> <a href="#">A. Christie</a> </li>
+								<li> <a href="#">A. C. Doyle</a> </li>
+							</ol>
+						</li
+						><li> 
+							<a href="#">Przygodowe</a> 
+							<ol>
+								<li> <a href="#">J. Verne</a> </li>
+								<li> <a href="#">A. Szklarski</a> </li>
+							</ol>
+						</li
+						><li> 
+							<a href="#">Sci fiction</a>
+							<ol>
+								<li> <a href="#">S. Lem</a> </li>
+								<li> <a href="#">J. Grzędowicz</a> </li>
+							</ol>
+						</li
+						><li> <a href="#">O autorze</a> </li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<article>
+			<div id="content">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus convallis consectetur blandit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus vehicula sapien id lacus fermentum commodo et at magna. Quisque dolor enim, commodo sed mauris sit amet, suscipit interdum mi. Donec commodo gravida leo vitae semper. Etiam placerat ac libero vel fringilla. Phasellus quis enim quam. Nullam sit amet pharetra erat, non fermentum dolor. Curabitur consectetur imperdiet libero non pharetra. Quisque viverra dui lectus.</p>
+
+				<p>Phasellus in mauris enim. Nulla facilisi. Donec mi felis, euismod nec condimentum vitae, eleifend nec libero. Proin quis orci ornare, rutrum metus elementum, sodales leo. Phasellus ullamcorper, felis quis varius porttitor, ante nunc varius sapien, aliquam egestas tortor libero vel turpis. Praesent finibus libero id metus porttitor sodales. In hendrerit sapien urna, at molestie purus dignissim luctus. Maecenas pretium, arcu id euismod interdum, magna diam fermentum metus, nec consequat tortor odio eu orci.</p>
+
+				<p>Duis vel mattis est, sed viverra arcu. Morbi blandit nisl consectetur nisi fermentum volutpat. Vestibulum sagittis consequat arcu, hendrerit auctor tellus luctus a. Nullam ut tellus feugiat erat tincidunt luctus. Mauris dignissim vel tortor quis aliquam. Cras aliquet pretium magna, id volutpat leo dictum ac. Ut enim libero, ullamcorper vel efficitur at, vehicula nec lacus. Aenean faucibus mi a metus dapibus tincidunt. Nunc interdum erat eu velit tempor, sed scelerisque sapien lobortis.</p>
+
+				<p>Ut sagittis elit eget dolor tincidunt placerat. Phasellus facilisis quam tellus, at scelerisque justo dictum ut. Ut in posuere velit. Fusce gravida vulputate gravida. In sed elit sem. Ut faucibus ante id ante malesuada fringilla. Donec a dapibus felis. Maecenas mollis efficitur purus, at bibendum mi sodales ut. Fusce vestibulum risus ac metus luctus gravida. Pellentesque tempor aliquet erat in elementum. Nullam dolor dolor, congue et ornare eu, aliquam non neque. Integer nulla nibh, maximus et rhoncus in, pellentesque eu velit.</p>
+
+				<p>Sed rhoncus quis eros vitae ornare. Phasellus maximus est felis, vel posuere eros pretium vel. Sed facilisis massa at velit vestibulum rutrum. Aliquam vel est accumsan augue elementum condimentum. Vivamus tempor eros eu lorem imperdiet dapibus. Donec non nibh et ante congue sagittis sed sit amet dui. Cras vitae lectus suscipit, fringilla sem id, finibus nibh. Aenean posuere iaculis porttitor. Suspendisse sed nunc suscipit, faucibus urna vel, pulvinar quam. Morbi eu eleifend velit, ac vestibulum metus. Donec facilisis nulla odio, at sollicitudin eros ullamcorper ut.</p>
+			</div>
+		</article>
+	</main>
 
 	<script src="js/mobile_menu.js"></script>
-
-	<div id="content">
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus convallis consectetur blandit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus vehicula sapien id lacus fermentum commodo et at magna. Quisque dolor enim, commodo sed mauris sit amet, suscipit interdum mi. Donec commodo gravida leo vitae semper. Etiam placerat ac libero vel fringilla. Phasellus quis enim quam. Nullam sit amet pharetra erat, non fermentum dolor. Curabitur consectetur imperdiet libero non pharetra. Quisque viverra dui lectus.</p>
-
-		<p>Phasellus in mauris enim. Nulla facilisi. Donec mi felis, euismod nec condimentum vitae, eleifend nec libero. Proin quis orci ornare, rutrum metus elementum, sodales leo. Phasellus ullamcorper, felis quis varius porttitor, ante nunc varius sapien, aliquam egestas tortor libero vel turpis. Praesent finibus libero id metus porttitor sodales. In hendrerit sapien urna, at molestie purus dignissim luctus. Maecenas pretium, arcu id euismod interdum, magna diam fermentum metus, nec consequat tortor odio eu orci.</p>
-
-		<p>Duis vel mattis est, sed viverra arcu. Morbi blandit nisl consectetur nisi fermentum volutpat. Vestibulum sagittis consequat arcu, hendrerit auctor tellus luctus a. Nullam ut tellus feugiat erat tincidunt luctus. Mauris dignissim vel tortor quis aliquam. Cras aliquet pretium magna, id volutpat leo dictum ac. Ut enim libero, ullamcorper vel efficitur at, vehicula nec lacus. Aenean faucibus mi a metus dapibus tincidunt. Nunc interdum erat eu velit tempor, sed scelerisque sapien lobortis.</p>
-
-		<p>Ut sagittis elit eget dolor tincidunt placerat. Phasellus facilisis quam tellus, at scelerisque justo dictum ut. Ut in posuere velit. Fusce gravida vulputate gravida. In sed elit sem. Ut faucibus ante id ante malesuada fringilla. Donec a dapibus felis. Maecenas mollis efficitur purus, at bibendum mi sodales ut. Fusce vestibulum risus ac metus luctus gravida. Pellentesque tempor aliquet erat in elementum. Nullam dolor dolor, congue et ornare eu, aliquam non neque. Integer nulla nibh, maximus et rhoncus in, pellentesque eu velit.</p>
-
-		<p>Sed rhoncus quis eros vitae ornare. Phasellus maximus est felis, vel posuere eros pretium vel. Sed facilisis massa at velit vestibulum rutrum. Aliquam vel est accumsan augue elementum condimentum. Vivamus tempor eros eu lorem imperdiet dapibus. Donec non nibh et ante congue sagittis sed sit amet dui. Cras vitae lectus suscipit, fringilla sem id, finibus nibh. Aenean posuere iaculis porttitor. Suspendisse sed nunc suscipit, faucibus urna vel, pulvinar quam. Morbi eu eleifend velit, ac vestibulum metus. Donec facilisis nulla odio, at sollicitudin eros ullamcorper ut.</p>
-	</div>
 </body>
 
 </html>

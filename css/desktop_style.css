@@ -1,8 +1,36 @@
 @media screen and (min-width: 1031px)
 {
+	#quote
+	{
+		position: absolute;
+		left: 15px;
+		top: 15px;
+		max-width: 400px;
+		font-size: 13px;
+		font-weight: bold;
+		color: white;
+	}
+
 	#logo
 	{
-		display: none;
+		display: inline-block;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+		top: 10px;
+		border-bottom: 1px solid seagreen;
+		margin-bottom: 8px;
+	}
+
+	#logo > img
+	{
+		width: 70px;
+		height: 70px;
+	}
+
+	.logoText
+	{
+		bottom: 12px;
 	}
 
 	#menuRect
@@ -24,6 +52,9 @@
 
 	#menuRect > ul > li:hover
 	{
+		cursor: pointer;
+		background-color: #bcbcb0;
+		border: 1px solid white;
 		border-radius: 10px;
 	}
 
@@ -34,7 +65,7 @@
 
 	#menuRect > ul > li:hover > a
 	{
-		color: gray;
+		color: #333;
 	}
 
 	#menuRect > ul > li > ol
@@ -47,12 +78,21 @@
 	#menuRect > ul > li > ol > li
 	{
 		width: 200px;
-		background-color: #ddd;
+		background-color: #bcbcb0;
+		opacity: 0.9;
+		border-bottom: 2px dotted #565650;
+	}
+
+	#menuRect > ul > li > ol > li:last-child
+	{
+		border-bottom: none;
 	}
 
 	#menuRect > ul > li > ol > li:hover
 	{
 		opacity: 0.8;
+		background-color: #ababa0;
+		cursor: pointer;
 	}
 
 	#menuRect > ul > li > ol > li:hover > a
