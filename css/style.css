@@ -103,6 +103,18 @@ body
 	box-shadow: 3px 3px 8px 7px rgba(102,102,102,1);
 }
 
+h2
+{
+	display: inline-block;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	color: #333;
+	padding-bottom: 20px;
+	border-bottom: 2px dotted #555;
+	margin-bottom: 40px;
+}
+
 p
 {
 	margin: 0;
@@ -112,4 +124,37 @@ p
 p:last-child
 {
 	margin-bottom: 0;
+}
+
+figure > img
+{
+	display: block;
+	border-radius: 8px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	box-shadow: 2px 2px 6px 2px black;
+}
+
+figcaption
+{
+	display: inline-block;
+	font-style: italic;
+	font-size: 14px;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	margin-top: 10px;
+}
+
+a
+{
+	text-decoration: none;
+	color: green;
+	font-weight: bold;
+}
+
+a:hover
+{
+	text-decoration: underline;
 }
